@@ -51,20 +51,7 @@ em, i { font-style: italic; }
 table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
 
-#top {
-  
-  display: block;
-  width: 100%;
-  height: 65px;
-  margin-bottom: 25px;
-  background-color: #2f2f2f;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2f2f2f), to(#515151));
-  background-image: -webkit-linear-gradient(top, #2f2f2f, #515151);
-  background-image: -moz-linear-gradient(top, #2f2f2f, #515151);
-  background-image: -ms-linear-gradient(top, #2f2f2f, #515151);
-  background-image: -o-linear-gradient(top, #2f2f2f, #515151);
-  background-image: linear-gradient(top, #2f2f2f, #515151);
-}
+
 
 .container {
   display: block;
@@ -73,13 +60,58 @@ img { border: 0; max-width: 100%; }
   padding: 0 7px;
 }
 
+#navigation ul li {
+  position: relative;
+}
+
+#navigation ul li.has-dropdown ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position the dropdown below the parent li */
+  left: 0;
+  background-color: #333;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#navigation ul li.has-dropdown:hover ul.dropdown {
+  display: inline-block;
+}
+
+#navigation ul li.has-dropdown ul.dropdown li {
+  width: 300%;
+  text-align: left;
+  padding:  0 30px 2px 15px;
+}
+
+
+/* ... (your existing code) ... */
+
+
+
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: brown;
+}
+
+#content {
+  margin-top: 65px;
+}
+
+
+
+
 
 /** top navbar **/
 #logo {
   display: block;
   float: left;
   color: #fefefe;
-  font-family: 'Wendy One', Tahoma, sans-serif;
+  font-family: 'Petrona', Tahoma, sans-serif;
   font-weight: normal;
   font-size: 3.35em;
   line-height: 60px;
@@ -113,6 +145,9 @@ img { border: 0; max-width: 100%; }
 #navigation ul li a:hover {
   color: #bdcff4;
 }
+
+
+
 h1 {
   font-family: 'Petrona', 'Trebuchet MS', 'Times New Roman', serif;
   font-size: 3.9em;

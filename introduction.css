@@ -22,6 +22,7 @@ body {
   line-height: 1;
   color: #414141;
   background: #eee;
+  
 }
 
 br { display: block; line-height: 1.6em; }
@@ -84,6 +85,7 @@ p {
   color: #515151;
   margin-bottom: 16px;
   text-align: justify;
+  text-indent: 2em;
 }
 .news{
   color: black;
@@ -137,26 +139,20 @@ a{
 
 
 #top {
-  
-  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 65px;
-  margin-bottom: 25px;
-  background-color: #2f2f2f;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2f2f2f), to(#515151));
-  background-image: -webkit-linear-gradient(top, #2f2f2f, #515151);
-  background-image: -moz-linear-gradient(top, #2f2f2f, #515151);
-  background-image: -ms-linear-gradient(top, #2f2f2f, #515151);
-  background-image: -o-linear-gradient(top, #2f2f2f, #515151);
-  background-image: linear-gradient(top, #2f2f2f, #515151);
+  z-index: 1000;
+  background-color: brown;
 }
 
-.container {
-  display: block;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 7px;
+#content {
+  margin-top: 65px;
 }
+
+
+
 
 
 /** top navbar **/
@@ -164,7 +160,7 @@ a{
   display: block;
   float: left;
   color: #fefefe;
-  font-family: 'Wendy One', Tahoma, sans-serif;
+  font-family: 'Petrona', Tahoma, sans-serif;
   font-weight: normal;
   font-size: 3.35em;
   line-height: 60px;
@@ -201,6 +197,13 @@ a{
 
 
 /** main content **/
+
+.container {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 7px;
+} 
 #content {
   display: block;
   padding: 15px 20px;
@@ -358,7 +361,8 @@ html[xmlns] .clearfix { display: block; }
 
   #mobilenav { display: block; background: #393939; }
 
-  p { line-height: 1.7em; }
+  p { line-height: 1.7em;
+    text-indent: 3em; }
 }
 
 @media screen and (max-width: 420px) {
